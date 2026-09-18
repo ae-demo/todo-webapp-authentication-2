@@ -1,0 +1,17 @@
+{
+  "name": "todo-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "todo-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "dependencies": [
+    { "kind": "component", "name": "todo-api", "description": "Fetches and mutates the signed-in user's todos." },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "The single-page app a User signs into and manages their private todo list from: add, view, complete/reopen, edit, and delete todos, and sign out. Renders no data of its own — every todo comes from todo-api.",
+  "stories": [1, 2, 3, 4, 5, 6, 7],
+  "skillsPinned": ["wireframes", "react-webapp", "oxygen-ui-design-system", "thunder-authentication"]
+}

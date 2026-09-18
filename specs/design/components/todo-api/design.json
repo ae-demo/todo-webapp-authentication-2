@@ -1,0 +1,17 @@
+{
+  "name": "todo-api",
+  "type": "service",
+  "version": "0.1.0",
+  "language": "Ballerina",
+  "buildpack": "docker",
+  "appPath": "todo-api",
+  "entrypoint": "deployment/service",
+  "exposure": "intranet",
+  "dependencies": [
+    { "kind": "platform-resource", "name": "todo-db", "resourceType": "postgres-cnpg", "parameters": { "instances": 1, "storage": "1Gi", "version": "16" } },
+    { "kind": "platform-resource", "name": "user-auth", "resourceType": "thunder-app" }
+  ],
+  "description": "Owns the Todo entity: create, list, update (title/completion), and delete todos scoped to the signed-in caller. Stores data in its own PostgreSQL database. Does not manage user accounts or authentication itself — it verifies the gateway's signed assertion for identity.",
+  "stories": [2, 3, 4, 5, 6],
+  "skillsPinned": ["openapi-conventions", "ballerina", "thunder-authentication", "api-management"]
+}
