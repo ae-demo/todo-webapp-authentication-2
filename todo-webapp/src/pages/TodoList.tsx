@@ -21,7 +21,7 @@ import {
   Typography,
 } from "@wso2/oxygen-ui";
 import { ChevronRight, Plus } from "@wso2/oxygen-ui-icons-react";
-import { todoApi } from "../api";
+import { fetchAllMyTodos, todoApi } from "../api";
 import type { components } from "../generated/todo-api";
 
 type Todo = components["schemas"]["Todo"];
@@ -35,12 +35,12 @@ export function TodoListPage(): JSX.Element {
 
   const load = useCallback(async () => {
     setError(null);
-    const { data, error: apiError } = await todoApi.GET("/me/todos", {});
-    if (apiError) {
+    const all = await fetchAllMyTodos();
+    if (all === null) {
       setError("Could not load your todos. Try reloading the page.");
       return;
     }
-    setTodos(data?.data ?? []);
+    setTodos(all);
   }, []);
 
   useEffect(() => {
