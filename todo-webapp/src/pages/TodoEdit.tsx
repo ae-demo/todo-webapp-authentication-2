@@ -20,7 +20,7 @@ import {
   TextField,
   Typography,
 } from "@wso2/oxygen-ui";
-import { todoApi } from "../api";
+import { fetchAllMyTodos, todoApi } from "../api";
 import type { components } from "../generated/todo-api";
 
 type Todo = components["schemas"]["Todo"];
@@ -42,13 +42,13 @@ export function TodoEditPage(): JSX.Element {
   useEffect(() => {
     if (todo || !id) return;
     let live = true;
-    void todoApi.GET("/me/todos", {}).then(({ data, error: apiError }) => {
+    void fetchAllMyTodos().then((all) => {
       if (!live) return;
-      if (apiError) {
+      if (all === null) {
         setError("Could not load this todo.");
         return;
       }
-      const found = data?.data.find((t) => t.id === id);
+      const found = all.find((t) => t.id === id);
       if (!found) {
         setNotFound(true);
         return;

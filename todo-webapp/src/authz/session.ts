@@ -124,15 +124,17 @@ export async function handleCallback(): Promise<User> {
   return userManager.signinRedirectCallback();
 }
 
-// The IdP's discovery document advertises no end_session_endpoint, so
-// signoutRedirect() rejects. Drop the LOCAL session instead.
+// Measured live: this deployment's Thunder DOES navigate on
+// signoutRedirect() rather than rejecting — straight to /oauth2/logout with a
+// post_logout_redirect_uri Thunder itself refuses, stranding the user on an
+// IdP error page instead of back on this app's sign-in step. That is a real
+// browser navigation, not a thrown rejection, so a try/catch around it never
+// runs its fallback. Never attempt the redirect: drop the LOCAL session and
+// send the user back to "/", where SignedIn's load-time guard (App.tsx) finds
+// no session and starts a fresh sign-in.
 export async function signOut(): Promise<void> {
-  try {
-    await userManager.signoutRedirect();
-  } catch {
-    await userManager.removeUser();
-    window.location.assign("/");
-  }
+  await userManager.removeUser();
+  window.location.assign("/");
 }
 
 /**
