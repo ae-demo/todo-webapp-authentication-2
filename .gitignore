@@ -1,0 +1,12 @@
+# crash artefacts — never wanted, in any component
+core
+core.*
+hs_err_pid*.log
+replay_pid*.log
+
+# todo-api (Ballerina)
+/todo-api/target/
+
+# todo-webapp (React/Vite)
+/todo-webapp/node_modules/
+/todo-webapp/dist/
