@@ -1,140 +1,20 @@
 {
   "schemaVersion": 1,
   "issue": 7,
-  "commit": "45ce2229d98629ab5c45931422b14d200c8bad88",
-  "generatedAt": "2026-09-18T05:54:09.706Z",
+  "commit": "3e1d8f353702a5955b00f8ce74ce59922ed729df",
+  "generatedAt": "2026-09-18T06:15:19.771Z",
   "playwrightVersion": "1.61.1",
   "batches": [
     {
-      "file": "2026-09-18T05-26-57-489Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-27-14-005Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-27-30-233Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-27-49-109Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-28-06-918Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-29-59-270Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-30-30-947Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-31-02-841Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-31-21-239Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-31-39-500Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-32-10-393Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-32-41-386Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-32-59-848Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-33-18-981Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-33-51-034Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-34-23-138Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-34-55-385Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-38-34-558Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-39-47-506Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-40-07-973Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-40-31-183Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-41-48-893Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-42-08-017Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-42-27-437Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-42-49-850Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-43-32-882Z.json",
-      "specs": 1
-    },
-    {
-      "file": "2026-09-18T05-44-44-019Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-45-29-429Z.json",
-      "specs": 2
-    },
-    {
-      "file": "2026-09-18T05-46-15-302Z.json",
-      "specs": 3
-    },
-    {
-      "file": "2026-09-18T05-47-30-249Z.json",
-      "specs": 3
-    },
-    {
-      "file": "2026-09-18T05-48-46-580Z.json",
+      "file": "2026-09-18T06-11-28-695Z.json",
       "specs": 13
     }
   ],
   "totals": {
     "e2e": {
       "total": 13,
-      "pass": 8,
-      "fail": 5,
+      "pass": 13,
+      "fail": 0,
       "notRun": 0
     },
     "manual": 0,
@@ -151,43 +31,37 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 11963,
+      "durationMs": 11952,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-001-b",
       "requirementId": "REQ-001",
       "must": "After signing in, a user sees their own todos, not any other user's",
       "method": "e2e",
-      "status": "fail",
+      "status": "pass",
       "spec": "tests/e2e/specs/AC-001-b.spec.ts",
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 14051,
-      "failure": {
-        "message": "Error: expect(received).toContain(expected) // indexOf\n\nExpected value: \"ac001b-1789710552380\"\nReceived array: [\"ac001b-1789709264237\", \"ac001b-1789709282760\", \"ac001b-1789709476919\", \"ac001b-1789709495085\", \"ac001c-1789709300649\", \"ac001c-1789709413324\", \"ac001c-1789709444882\", \"ac002a-1789709513518\", \"ac002a-1789709544384\", \"ac002b-1789709527022\", …]",
-        "location": "AC-001-b.spec.ts:6"
-      },
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "durationMs": 14268,
+      "failure": null,
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-001-c",
       "requirementId": "REQ-001",
       "must": "A user's todos persist and are visible again after signing out and back in",
       "method": "e2e",
-      "status": "fail",
+      "status": "pass",
       "spec": "tests/e2e/specs/AC-001-c.spec.ts",
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 30315,
-      "failure": {
-        "message": "Test timeout of 30000ms exceeded.",
-        "location": "AC-001-c.spec.ts:6"
-      },
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "durationMs": 28087,
+      "failure": null,
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-002-a",
@@ -199,9 +73,9 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 15339,
+      "durationMs": 13629,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-002-b",
@@ -213,26 +87,23 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 13657,
+      "durationMs": 13984,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-003-a",
       "requirementId": "REQ-003",
       "must": "The todo list screen shows every todo belonging to the signed-in user",
       "method": "e2e",
-      "status": "fail",
+      "status": "pass",
       "spec": "tests/e2e/specs/AC-003-a.spec.ts",
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 15026,
-      "failure": {
-        "message": "Error: expect(received).toEqual(expected) // deep equality\n\n- Expected  - 25\n+ Received  +  0\n\n  Array [\n    \"ac001b-1789709264237\",\n    \"ac001b-1789709282760\",\n    \"ac001b-1789709476919\",\n    \"ac001b-1789709495085\",\n-   \"ac001b-1789710044862\",\n-   \"ac001b-1789710123020\",\n-   \"ac001b-1789710141821\",\n-   \"ac001b-1789710552380\",\n    \"ac001c-1789709300649\",\n    \"ac001c-1789709413324\",\n    \"ac001c-1789709444882\",\n-   \"ac001c-1789710183921\",\n-   \"ac001c-1789710226786\",\n-   \"ac001c-1789710567383\",\n    \"ac002a-1789709513518\",\n    \"ac002a-1789709544384\",\n-   \"ac002a-1789710600285\",\n    \"ac002b-1789709527022\",\n    \"ac002b-1789709557981\",\n-   \"ac002b-1789710613925\",\n    \"ac003a-1-1789709575524\",\n    \"ac003a-1-1789709593921\",\n-   \"ac003a-1-1789710001622\",\n-   \"ac003a-1-1789710021682\",\n-   \"ac003a-1-1789710161619\",\n-   \"ac003a-1-1789710627521\",\n    \"ac003a-2-1789709575524\",\n    \"ac003a-2-1789709593921\",\n-   \"ac003a-2-1789710001622\",\n-   \"ac003a-2-1789710021682\",\n-   \"ac003a-2-1789710161619\",\n-   \"ac003a-2-1789710627521\",\n    \"ac004a-1789709613120\",\n    \"ac004a-1789709645019\",\n    \"ac004b-1789709627181\",\n    \"ac004b-1789709659022\",\n    \"ac005a-1789709677021-edited\",\n-   \"ac005a-1789709709329-edited\",\n-   \"ac005a-1789709928289-edited\",\n-   \"ac005a-1789710298188-edited\",\n-   \"ac005a-1789710343516-edited\",\n-   \"ac007b-1789710420388\",\n-   \"ac007b-1789710495325\",\n-   \"ac008a-1789710445482\",\n-   \"ac008a-1789710520211\",\n  ]",
-        "location": "AC-003-a.spec.ts:6"
-      },
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "durationMs": 14781,
+      "failure": null,
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-004-a",
@@ -244,9 +115,9 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 13828,
+      "durationMs": 15068,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-004-b",
@@ -258,26 +129,23 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 14087,
+      "durationMs": 14479,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-005-a",
       "requirementId": "REQ-005",
       "must": "Editing a todo's title saves the new title and shows it in the list",
       "method": "e2e",
-      "status": "fail",
+      "status": "pass",
       "spec": "tests/e2e/specs/AC-005-a.spec.ts",
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 24878,
-      "failure": {
-        "message": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('cell', { name: 'ac005a-1789710671782-edited', exact: true })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 10000ms\n  - waiting for getByRole('cell', { name: 'ac005a-1789710671782-edited', exact: true })\n",
-        "location": "AC-005-a.spec.ts:6"
-      },
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "durationMs": 16875,
+      "failure": null,
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-006-a",
@@ -289,26 +157,23 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 14618,
+      "durationMs": 14511,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-007-a",
       "requirementId": "REQ-007",
       "must": "Signing out ends the session and returns the user to the sign-in step",
       "method": "e2e",
-      "status": "fail",
+      "status": "pass",
       "spec": "tests/e2e/specs/AC-007-a.spec.ts",
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 30261,
-      "failure": {
-        "message": "Test timeout of 30000ms exceeded.",
-        "location": "AC-007-a.spec.ts:5"
-      },
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "durationMs": 26811,
+      "failure": null,
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-007-b",
@@ -320,9 +185,9 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 25062,
+      "durationMs": 25426,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     },
     {
       "id": "AC-008-a",
@@ -334,9 +199,9 @@
       "healed": false,
       "healAttempts": 0,
       "flaky": false,
-      "durationMs": 13900,
+      "durationMs": 14557,
       "failure": null,
-      "batch": "2026-09-18T05-48-46-580Z.json"
+      "batch": "2026-09-18T06-11-28-695Z.json"
     }
   ]
 }
